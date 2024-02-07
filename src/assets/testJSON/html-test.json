@@ -1,0 +1,197 @@
+[
+  {
+    "title": "Какой тег используется для создания абзаца в HTML?",
+    "variants": ["<paragraph>", "<p>", "<para>", "<ap>"],
+    "correct": 1
+  },
+  {
+    "title": "Как правильно подключить внешний стилевой файл CSS в HTML?",
+    "variants": [
+      "<css src=\"styles.css\" />",
+      "<link style=\"styles.css\" />",
+      "<stylesheet href=\"styles.css\" />",
+      "<link rel=\"stylesheet\" href=\"styles.css\" />"
+    ],
+    "correct": 3
+  },
+  {
+    "title": "Как задать жирное начертание (bold) текста в CSS?",
+    "variants": ["text-style: bold;", "font-weight: bold;", "text-bold: true;", "bold: true;"],
+    "correct": 1
+  },
+  {
+    "title": "Как создать неупорядоченный список в HTML?",
+    "variants": ["<list>", "<ul>", "<ol>", "<unordered>"],
+    "correct": 1
+  },
+  {
+    "title": "Каков правильный синтаксис для комментария в CSS?",
+    "variants": ["/* Comment */", "// Comment", "<!-- Comment -->", "<!--- Comment --->"],
+    "correct": 0
+  },
+  {
+    "title": "Как изменить цвет фона для всей страницы в CSS?",
+    "variants": [
+      "background: #ffffff;",
+      "page-color: #ffffff;",
+      "background-color: #ffffff;",
+      "color: #ffffff;"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как создать внутреннюю ссылку (якорь) в HTML?",
+    "variants": [
+      "<a src=\"#section\">Internal Link</a>",
+      "<a href=\"https://example.com#section\">Internal Link</a>",
+      "<link href=\"#section\">Internal Link</link>",
+      "<internal href=\"#section\">Internal Link</internal>"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Как задать выравнивание элемента по центру страницы в CSS?",
+    "variants": ["align: center;", "text-align: center;", "margin: auto;", "center: true;"],
+    "correct": 1
+  },
+  {
+    "title": "Как изменить размер текста в CSS?",
+    "variants": ["font: 16px;", "text-size: 16px;", "size: 16px;", "font-size: 16px;"],
+    "correct": 3
+  },
+  {
+    "title": "Как задать margin элемента только справа в CSS?",
+    "variants": [
+      "margin: 10px;",
+      "margin-right: 10px;",
+      "padding-right: 10px;",
+      "margin-left: 10px;"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Как создать нумерованный список в HTML?",
+    "variants": ["<ul>", "<list>", "<ol>", "<ordered>"],
+    "correct": 2
+  },
+  {
+    "title": "Как сделать текст курсивом в CSS?",
+    "variants": ["text-style: italic;", "italic: true;", "font-style: italic;", "style: italic;"],
+    "correct": 2
+  },
+  {
+    "title": "Как вставить картинку в HTML?",
+    "variants": [
+      "<image src=\"picture.jpg\" alt=\"Image\">",
+      "<img src=\"picture.jpg\" alt=\"Image\">",
+      "<picture src=\"picture.jpg\" alt=\"Image\">",
+      "<img alt=\"Image\">picture.jpg</img>"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Какой тег используется для создания ссылки в HTML?",
+    "variants": ["<url>", "<link>", "<a>", "<href>"],
+    "correct": 2
+  },
+  {
+    "title": "Как сделать текст заголовка красным цветом в CSS?",
+    "variants": ["text-color: red;", "color: red;", "font-color: red;", "text-style: red;"],
+    "correct": 1
+  },
+  {
+    "title": "Как вставить JavaScript код в HTML?",
+    "variants": [
+      "<script src=\"script.js\"></script>",
+      "<javascript src=\"script.js\"></javascript>",
+      "<js>script.js</js>",
+      "<script>script.js</script>"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Как задать внутренний отступ (padding) для всех сторон элемента в CSS?",
+    "variants": [
+      "padding: 10px;",
+      "padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;",
+      "padding-all: 10px;",
+      "margin: 10px;"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Как создать комментарий в HTML?",
+    "variants": ["<!-- Comment -->", "// Comment", "/* Comment */", "<comment>Comment</comment>"],
+    "correct": 0
+  },
+  {
+    "title": "Как создать таблицу в HTML?",
+    "variants": ["<table>", "<tab>", "<tr>", "<tabled>"],
+    "correct": 0
+  },
+  {
+    "title": "Как скрыть элемент в CSS?",
+    "variants": ["display: none;", "visibility: hidden;", "hidden: true;", "visible: false;"],
+    "correct": 0
+  },
+  {
+    "title": "Как вставить символ \"копирайта\" (©) в HTML?",
+    "variants": ["&copy;", "&reg;", "&copyr;", "&#169;"],
+    "correct": 0
+  },
+  {
+    "title": "Как создать выпадающий список (dropdown) в HTML?",
+    "variants": ["<list>", "<dropdown>", "<select>", "<ul>"],
+    "correct": 2
+  },
+  {
+    "title": "Как вставить гиперссылку с открытием в новой вкладке в HTML?",
+    "variants": [
+      "<a href=\"https://example.com\" target=\"_blank\">Link</a>",
+      "<a href=\"https://example.com\" new-tab=\"true\">Link</a>",
+      "<link href=\"https://example.com\" target=\"_new\">Link</link>",
+      "<external href=\"https://example.com\">Link</external>"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Как задать ширину границы (border) в CSS?",
+    "variants": ["border-width: 1px;", "border-size: 1px;", "border: 1px;", "border-style: 1px;"],
+    "correct": 0
+  },
+  {
+    "title": "Как создать круглую кнопку в CSS?",
+    "variants": ["shape: circle;", "border-radius: 50%;", "round: true;", "circle: true;"],
+    "correct": 1
+  },
+  {
+    "title": "Как вставить видео в HTML?",
+    "variants": [
+      "<media src=\"video.mp4\" />",
+      "<video src=\"video.mp4\"></video>",
+      "<play src=\"video.mp4\"></play>",
+      "<vid src=\"video.mp4\" />"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Как задать фоновый цвет для элемента в CSS?",
+    "variants": [
+      "bg-color: #ffffff;",
+      "color: #ffffff;",
+      "background-color: #ffffff;",
+      "background: #ffffff;"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как задать высоту строки (line height) в CSS?",
+    "variants": ["height: 20px;", "line: 20px;", "line-height: 20px;", "font-line: 20px;"],
+    "correct": 2
+  },
+  {
+    "title": "Как вставить символ \"сноска\" (™) в HTML?",
+    "variants": ["&trade;", "&reg;", "&copy;", "&#8482;"],
+    "correct": 0
+  }
+]

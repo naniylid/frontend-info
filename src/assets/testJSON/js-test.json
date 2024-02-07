@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Как объявить переменную в JavaScript?",
+    "variants": ["var x", "let x", "const x", "variable x"],
+    "correct": 1
+  },
+  {
+    "title": "Как вывести сообщение в консоль (console) в JavaScript?",
+    "variants": [
+      "log(\"Hello\")",
+      "console.print(\"Hello\")",
+      "print(\"Hello\")",
+      "console.log(\"Hello\")"
+    ],
+    "correct": 3
+  },
+  {
+    "title": "Каков правильный способ создания функции в JavaScript?",
+    "variants": [
+      "function = myFunction() {}",
+      "function myFunction() {}",
+      "create function myFunction() {}",
+      "def myFunction() {}"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Какие из следующих типов данных существуют в JavaScript?",
+    "variants": [
+      "Number, String, Boolean",
+      "Integer, Float, Double",
+      "Char, Byte, Short",
+      "All of the above"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Что вернет оператор typeof для массива?",
+    "variants": ["array", "object", "Array", "undefined"],
+    "correct": 1
+  },
+  {
+    "title": "Каков результат выполнения следующего кода: 3 + '3'?",
+    "variants": ["6", "'33'", "33", "'6'"],
+    "correct": 1
+  },
+  {
+    "title": "Как проверить, является ли переменная x числом в JavaScript?",
+    "variants": [
+      "if (typeof x === 'number')",
+      "if (x.type === 'number')",
+      "if (x instanceof Number)",
+      "if (x.isNumber())"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Что делает метод map у массивов в JavaScript?",
+    "variants": [
+      "Производит отображение элементов массива в новый массив",
+      "Изменяет размер массива",
+      "Выполняет операцию над каждым элементом массива",
+      "Сортирует массив в порядке убывания"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Как создать объект в JavaScript?",
+    "variants": [
+      "var obj = Object()",
+      "var obj = {}",
+      "var obj = new Object()",
+      "Все варианты верные"
+    ],
+    "correct": 3
+  },
+  {
+    "title": "Что делает оператор === в JavaScript?",
+    "variants": [
+      "Сравнивает значения на равенство",
+      "Сравнивает значения и типы на равенство",
+      "Присваивает значение переменной",
+      "Сравнивает только типы на равенство"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Что вернет следующее выражение: 5 > 3 && 2 < 4?",
+    "variants": ["true", "false", "undefined", "null"],
+    "correct": 0
+  },
+  {
+    "title": "Какие из следующих циклов используются в JavaScript?",
+    "variants": [
+      "for, foreach, while",
+      "do-while, foreach, repeat",
+      "for, while, do-while",
+      "loop, for-in, do"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Что такое замыкание (closure) в JavaScript?",
+    "variants": [
+      "Ошибка в коде",
+      "Метод для замыкания браузера",
+      "Функция, которая ссылается на переменные из внешнего контекста",
+      "Способ шифрования данных"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как проверить, существует ли свойство name в объекте person?",
+    "variants": [
+      "if (person.propertyExists('name'))",
+      "if (person.name !== undefined)",
+      "if ('name' in person)",
+      "if (person.hasProperty('name'))"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Что такое JSON?",
+    "variants": [
+      "JavaScript Object Notation - формат обмена данными",
+      "JavaScript Organizational Notation - формат организации кода",
+      "JavaScript Output Network - сетевой вывод JavaScript",
+      "Java Server Object Notation - формат объектов сервера Java"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Какие методы используются для работы с массивами в JavaScript?",
+    "variants": [
+      "push(), pop(), shift()",
+      "add(), remove(), clear()",
+      "insert(), update(), delete()",
+      "append(), prepend(), remove()"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Как создать асинхронную функцию в JavaScript?",
+    "variants": [
+      "async function myFunction() {}",
+      "function async myFunction() {}",
+      "async = function() {}",
+      "function myFunction async() {}"
+    ],
+    "correct": 0
+  },
+  {
+    "title": "Что такое событие (event) в контексте JavaScript?",
+    "variants": [
+      "Ошибка в коде",
+      "Функция для вызова других функций",
+      "Действие, на которое можно отреагировать кодом",
+      "Переменная, содержащая данные"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как выполнить AJAX-запрос в JavaScript?",
+    "variants": [
+      "ajaxRequest('GET', 'url', callbackFunction)",
+      "fetch('url').then(callbackFunction)",
+      "request('url', callbackFunction)",
+      "xmlHttpRequest('url', callbackFunction)"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Какие методы используются для работы с строками в JavaScript?",
+    "variants": [
+      "concat(), slice(), toUpperCase()",
+      "append(), remove(), replace()",
+      "add(), split(), toLowerCase()",
+      "insert(), delete(), trim()"
+    ],
+    "correct": 0
+  }
+]
