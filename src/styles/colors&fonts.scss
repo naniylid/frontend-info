@@ -1,0 +1,16 @@
+$baseColor: #0000ff;
+$purpleColor: #ff00ff;
+$yellowColor: #ffff00;
+$greenColor: #00ff00;
+
+@font-face {
+  font-family: 'JetBrains Mono NL';
+  src: url('../assets/fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono NL Light';
+  src: url('../assets/fonts/JetBrainsMonoNL-Light.ttf') format('truetype');
+  font-display: swap;
+}
