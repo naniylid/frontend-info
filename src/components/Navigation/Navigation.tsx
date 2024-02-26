@@ -1,5 +1,5 @@
 import { FaBars, FaTimes } from 'react-icons/fa';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 
 import './Navigation.module.scss';
@@ -18,16 +18,33 @@ const routes: Route[] = [
 
 const Navigation: React.FC = () => {
   const navRef = useRef<HTMLUListElement>(null);
+  const [isNavActive, setIsNavActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > navRef.current!.offsetHeight + 10) {
+        setIsNavActive(true);
+      } else {
+        setIsNavActive(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const showNavbar = useCallback(() => {
     if (navRef.current) {
-      navRef.current.classList.toggle('responsive_nav');
+      navRef.current!.classList.toggle('responsive_nav');
     }
   }, []);
 
   return (
     <>
-      <nav>
+      <nav ref={navRef} className={isNavActive ? 'active' : 'nav'}>
         <div className='border'>
           {' '}
           <a href='/'> </a>
