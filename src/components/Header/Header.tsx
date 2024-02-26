@@ -17,7 +17,7 @@ const Header: React.FC = () => {
 
   return (
     <div className='header'>
-      <h1>{displayedText}</h1>
+      <h1>{displayedText} </h1>
       <div className='header-text'>
         <p>Добро пожаловать на наш сайт!</p>
         <p>

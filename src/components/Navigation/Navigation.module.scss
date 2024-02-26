@@ -7,11 +7,17 @@
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr;
   height: 76px;
+  width: 100%;
+  background: black;
 
   .border {
     width: min(100%, 35px);
@@ -52,6 +58,13 @@ nav {
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
+  }
+}
+.active {
+  background-color: white;
+
+  a {
+    color: black;
   }
 }
 
