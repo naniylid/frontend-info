@@ -1,0 +1,145 @@
+@import '../colors&fonts.scss';
+
+.study-plan {
+  position: absolute;
+  margin-top: 900px;
+  width: 100%;
+  margin-left: 138px;
+
+  h1 {
+    font-family: 'JetBrains Mono NL Light';
+    font-size: 75px;
+    line-height: 70px;
+    width: 360px;
+    color: $baseColor;
+  }
+  .main-line {
+    position: absolute;
+    margin-left: 10px;
+    border-left: 2px solid $baseColor;
+    height: 1500px;
+  }
+}
+
+.plan-items {
+  margin: 80px 0 0 70px;
+
+  .plan-items_block {
+    margin-top: 30px;
+
+    h2 {
+      color: $baseColor;
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+
+    .line {
+      margin-top: 10px;
+      position: absolute;
+      border-left: 1px solid #4b4b4b;
+      height: 270px;
+    }
+
+    p {
+      margin: 50px 0 0 70px;
+      width: 566px;
+      font-size: 19px;
+      line-height: 28px;
+    }
+
+    ul {
+      width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 35px 0 0 -25px;
+
+      li {
+        list-style: none;
+        margin-right: 15px;
+        margin-top: 15px;
+
+        button {
+          cursor: pointer;
+          width: 219px;
+          height: 42px;
+          border-radius: 49px;
+          border: 1px solid $baseColor;
+          background-color: black;
+          position: relative;
+          z-index: 0;
+
+          &:before {
+            content: '';
+            background: linear-gradient(
+              45deg,
+              #ff0000,
+              #ff7300,
+              #fffb00,
+              #48ff00,
+              #00ffd5,
+              #002bff,
+              #7a00ff,
+              #ff00c8,
+              #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 49px;
+          }
+
+          &:active {
+            color: #000;
+          }
+
+          &:active:after {
+            background: transparent;
+          }
+
+          &:hover:before {
+            opacity: 1;
+          }
+
+          &:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 49px;
+          }
+
+          @keyframes glowing {
+            0% {
+              background-position: 0 0;
+            }
+            50% {
+              background-position: 400% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+          }
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 19px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
