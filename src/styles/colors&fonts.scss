@@ -3,6 +3,11 @@ $purpleColor: #ff00ff;
 $yellowColor: #ffff00;
 $greenColor: #00ff00;
 
+:root {
+  $font-family: 'JetBrains Mono NL', sans-serif;
+  $light-font: 'JetBrains Mono NL Light', sans-serif;
+}
+
 @font-face {
   font-family: 'JetBrains Mono NL';
   src: url('../assets/fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
