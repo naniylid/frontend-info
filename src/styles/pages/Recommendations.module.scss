@@ -1,0 +1,23 @@
+@import "../colors&fonts.scss";
+
+.recommendations {
+  position: absolute;
+  margin-top: 4543px;
+  width: 100%;
+  margin-left: 138px;
+
+  h1 {
+    font-family: "JetBrains Mono NL Light";
+    font-size: 75px;
+    line-height: 70px;
+    width: 360px;
+    color: $purpleColor;
+  }
+  .main-line {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 6px;
+    border-left: 2px solid $purpleColor;
+    height: 3370px;
+  }
+}

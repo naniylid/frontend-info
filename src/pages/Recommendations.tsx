@@ -1,8 +1,9 @@
+import "../styles/pages/Recommendations.module.scss";
 import RecommendItems from "../components/Recommendations/RecommendItems";
 
-const StudyPlan: React.FC = () => {
+const Recommendations: React.FC = () => {
   return (
-    <div className="study-plan">
+    <div className="recommendations">
       <h1>РЕКОМЕНДАЦИИ</h1>
       <div className="main-line"></div>
       <RecommendItems />
@@ -10,4 +11,4 @@ const StudyPlan: React.FC = () => {
   );
 };
 
-export default StudyPlan;
+export default Recommendations;
