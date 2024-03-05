@@ -123,12 +123,17 @@
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.33);
       border-radius: 40px;
+      backdrop-filter: blur(5px);
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: #000;
+        background-color: rgba(#000, 0.48);
         color: $purpleColor;
-        border: 1px solid $purpleColor;
+        border: 1px solid rgba($purpleColor, 0.33);
+      }
+
+      &:nth-of-type(2) {
+        z-index: 3;
       }
     }
   }
@@ -147,9 +152,35 @@
   }
 
   .challenges {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 14px;
     padding: 25.5px 0 0 55.5px;
+
+    &_decor {
+      position: absolute;
+    }
+
+    .circle-svg {
+      max-width: 60px;
+      top: 28%;
+      left: 7%;
+      z-index: 2;
+    }
+
+    .star-svg {
+      max-width: 112px;
+      top: 7%;
+      left: 88%;
+      z-index: -1;
+    }
+
+    .triangle-svg {
+      max-width: 64px;
+      top: 79%;
+      left: 75%;
+      z-index: -1;
+    }
   }
 }

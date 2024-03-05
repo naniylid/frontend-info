@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import resultSchool from "../../assets/image/result-school.png";
 import rollingSSchool from "../../assets/image/rs-school.png";
+import circle from "../../assets/image/circle.svg";
+import star from "../../assets/image/star.svg";
+import triangle from "../../assets/image/triangle.svg";
 
 const RecommendItems: React.FC = () => {
   return (
@@ -36,6 +39,13 @@ const RecommendItems: React.FC = () => {
         <section className="recomm-items_block">
           <h2>ЧЕЛЛЕНДЖИ</h2>
           <div className="line challenges">
+            <img src={circle} alt="" className="challenges_decor circle-svg" />
+            <img src={star} alt="" className="challenges_decor star-svg" />
+            <img
+              src={triangle}
+              alt=""
+              className="challenges_decor triangle-svg"
+            />
             <Link
               to="https://100dayscss.com/about/"
               target="_blank"
