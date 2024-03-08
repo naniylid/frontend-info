@@ -8,7 +8,7 @@ const Slider: React.FC = () => {
       <div className="slider">
         {slides.map((slide) => (
           <div className="slider-card">
-            <span className="slider-card--digit">{slide.digit}</span>
+            <span className="slider-card--digit">{`${slide.digit}/`}</span>
             <h4 className="slider-card--title">{slide.title}</h4>
             <p className="slider-card--desc">{slide.desc}</p>
           </div>

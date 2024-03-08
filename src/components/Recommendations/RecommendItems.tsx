@@ -5,11 +5,12 @@ import circle from "../../assets/image/circle.svg";
 import star from "../../assets/image/star.svg";
 import triangle from "../../assets/image/triangle.svg";
 import Slider from "./Slider";
+import { webItems } from "./types";
 
 const RecommendItems: React.FC = () => {
   return (
     <div className="recomm-items">
-      <div className="recomm-items--flex">
+      <div className="recomm-items--flex mrgn-bottom">
         <section className="recomm-items_block">
           <h2>БЕСПЛАТНЫЕ ШКОЛЫ</h2>
           <div className="line schools">
@@ -74,16 +75,28 @@ const RecommendItems: React.FC = () => {
           </div>
         </section>
       </div>
-      <section className="recomm-items_block">
+      <section className="recomm-items_block mrgn-bottom">
         <h2>Литература</h2>
         <Slider />
       </section>
-      {/* <section className="recomm-items_block">
-          <h2>Сайты</h2>
-        </section>
-        <section className="recomm-items_block">
-          <h2>Игры для обучения</h2>
-        </section> */}
+      <section className="recomm-items_block mrgn-bottom">
+        <h2>Сайты</h2>
+        <div className="line webs">
+          {webItems.map((item) => (
+            <div className="webs-item">
+              <h4>{item.title}</h4>
+              <div className="line webs-item--info">
+                <p>{item.desc}</p>
+                <a href={item.button.href}>{item.button.titleBtn}</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="recomm-items_block">
+        <h2>Игры для обучения</h2>
+        <div className="line games"></div>
+      </section>
     </div>
   );
 };
