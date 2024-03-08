@@ -4,6 +4,7 @@ import rollingSSchool from "../../assets/image/rs-school.png";
 import circle from "../../assets/image/circle.svg";
 import star from "../../assets/image/star.svg";
 import triangle from "../../assets/image/triangle.svg";
+import Slider from "./Slider";
 
 const RecommendItems: React.FC = () => {
   return (
@@ -72,16 +73,17 @@ const RecommendItems: React.FC = () => {
             </Link>
           </div>
         </section>
-        {/* <section className="recomm-items_block">
-          <h2>Литература</h2>
-        </section>
-        <section className="recomm-items_block">
+      </div>
+      <section className="recomm-items_block">
+        <h2>Литература</h2>
+        <Slider />
+      </section>
+      {/* <section className="recomm-items_block">
           <h2>Сайты</h2>
         </section>
         <section className="recomm-items_block">
           <h2>Игры для обучения</h2>
         </section> */}
-      </div>
     </div>
   );
 };

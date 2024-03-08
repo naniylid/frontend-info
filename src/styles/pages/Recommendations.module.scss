@@ -183,4 +183,14 @@
       z-index: -1;
     }
   }
+
+  .slider {
+    &-card {
+      width: 567px;
+      height: 308px;
+      border: 1px solid $purpleColor;
+      border-radius: 36px;
+      background: linear-gradient(44deg, #adadad 0%, #cdcdcd 100%);
+    }
+  }
 }
