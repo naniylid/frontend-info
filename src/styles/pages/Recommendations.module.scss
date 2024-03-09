@@ -188,9 +188,19 @@
     }
   }
 
+  .slider-lit {
+    padding: 38px 0 0 57px;
+  }
   .slider {
+    display: flex;
+    gap: 14px;
+    // overflow-x: scroll;
+    // scroll-snap-type: x mandatory;
+    // -webkit-overflow-scrolling: touch;
+    // scroll-behavior: smooth;
+
     &-card {
-      width: 567px;
+      width: 567px !important;
       height: 308px;
       padding: 58px 49px 102px 49px;
       font-size: 19px;
@@ -198,6 +208,10 @@
       background: linear-gradient(44deg, #adadad 0%, #cdcdcd 100%);
       border: 1px solid $purpleColor;
       border-radius: 36px;
+
+      // scroll-snap-align: start;
+      // transform: translateX(-50%);
+      // transition: transform 0.5s, opacity 0.5s;
 
       &--digit {
         display: inline-block;
@@ -217,6 +231,11 @@
         color: #eee;
       }
     }
+
+    // &--card.active {
+    //   opacity: 1;
+    //   transform: translateX(0);
+    // }
   }
 
   .webs {
