@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 import { htmlButtons, jsButtons, frameButtons } from './Buttons';
 
 const PlanItems: React.FC = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
   return (
     <div className='plan-items'>
-      <div className='plan-items_block'>
+      <div ref={ref} className={`plan-items_block ${inView ? 'plan-items_block_loading' : ''}`}>
         <h2>HTML И CSS</h2>
         <div className='line'>
           <p>
@@ -17,7 +22,7 @@ const PlanItems: React.FC = () => {
               const { href, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={href} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -26,7 +31,7 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className={`plan-items_block`}>
         <h2>JavaScript</h2>
         <div className='line '>
           <p>
@@ -52,7 +57,7 @@ const PlanItems: React.FC = () => {
               const { href, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={href} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -61,7 +66,7 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className={`plan-items_block`}>
         <h2>React, Angular или Vue</h2>
         <div className='line '>
           <p>
@@ -74,7 +79,7 @@ const PlanItems: React.FC = () => {
               const { href, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={href} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -83,7 +88,7 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className='plan-items_block loading'>
         <h2>TypeScript</h2>
         <div className='line '>
           <p>
@@ -92,14 +97,14 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             <li>
-              <Link to='/'>
+              <Link to='/' target='_blank'>
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className='plan-items_block loading'>
         <h2>Алгоритмы</h2>
         <div className='line '>
           <p>
@@ -110,27 +115,27 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             <li>
-              <Link to='/'>
+              <Link to='/' target='_blank'>
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className='plan-items_block loading'>
         <h2>Accessibility, A11y</h2>
         <div className='line '>
           <p>Рекомендую знать, но не обязательно</p>
           <ul>
             <li>
-              <Link to='/'>
+              <Link to='/' target='_blank'>
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className='plan-items_block'>
+      <div className='plan-items_block loading'>
         <h2>Дополнительно нужно знать</h2>
         <div className='line '>
           <div className='plan-items_block--list'>
@@ -155,7 +160,7 @@ const PlanItems: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    <Link to='/'>
+                    <Link to='/' target='_blank'>
                       <button>Git →</button>
                     </Link>
                   </li>
@@ -170,7 +175,7 @@ const PlanItems: React.FC = () => {
                 <p>WEBPACK - это статический модульный сборщик для приложений на JavaScript.</p>
                 <ul>
                   <li>
-                    <Link to='/'>
+                    <Link to='/' target='_blank'>
                       <button>WEBPACK →</button>
                     </Link>
                   </li>
@@ -188,13 +193,13 @@ const PlanItems: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    <Link to='/'>
+                    <Link to='/' target='_blank'>
                       <button>Теория →</button>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/' target='_blank'>
                       <button>Теория →</button>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/' target='_blank'>
                       <button>Теория →</button>
                     </Link>
                   </li>
