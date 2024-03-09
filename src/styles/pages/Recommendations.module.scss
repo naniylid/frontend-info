@@ -190,14 +190,11 @@
 
   .slider-lit {
     padding: 38px 0 0 57px;
+    max-width: 1206px;
   }
   .slider {
     display: flex;
     gap: 14px;
-    // overflow-x: scroll;
-    // scroll-snap-type: x mandatory;
-    // -webkit-overflow-scrolling: touch;
-    // scroll-behavior: smooth;
 
     &-card {
       width: 567px !important;
@@ -208,10 +205,6 @@
       background: linear-gradient(44deg, #adadad 0%, #cdcdcd 100%);
       border: 1px solid $purpleColor;
       border-radius: 36px;
-
-      // scroll-snap-align: start;
-      // transform: translateX(-50%);
-      // transition: transform 0.5s, opacity 0.5s;
 
       &--digit {
         display: inline-block;
