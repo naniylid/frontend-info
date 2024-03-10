@@ -1,0 +1,38 @@
+@import '../colors&fonts.scss';
+@import '../components/buttons.scss';
+
+.test-task {
+  width: 100%;
+  margin: 150px 0 0 140px;
+
+  h1 {
+    font-size: 75px;
+    font-family: 'JetBrains Mono NL Light';
+    color: $greenColor;
+    text-transform: uppercase;
+  }
+
+  .line {
+    margin-top: 4px;
+    border-left: 1px solid $greenColor;
+
+    p {
+      padding: 40px;
+      width: 80%;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      padding: 40px;
+      font-size: 26px;
+      line-height: 28px;
+    }
+
+    ul {
+      padding: 0px 40px;
+      li {
+        display: flex;
+      }
+    }
+  }
+}

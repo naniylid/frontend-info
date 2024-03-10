@@ -10,10 +10,10 @@ interface Route {
 }
 
 const routes: Route[] = [
-  { to: '#', title: 'ПЛАН ОБУЧЕНИЯ' },
+  { to: '', title: 'ПЛАН ОБУЧЕНИЯ' },
   { to: '#', title: 'РЕКОМЕНДАЦИИ' },
   { to: '#', title: 'ИДЕИ' },
-  { to: '../../pages/Test', title: 'ТЕСТ' },
+  { to: '/test', title: 'ТЕСТ' },
 ];
 
 const Navigation: React.FC = () => {

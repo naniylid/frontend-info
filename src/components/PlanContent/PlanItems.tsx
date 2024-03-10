@@ -41,10 +41,10 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             {htmlButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href} target='_blank'>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -79,10 +79,10 @@ const PlanItems: React.FC = () => {
           </div>
           <ul>
             {jsButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href} target='_blank'>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -104,10 +104,10 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             {frameButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href} target='_blank'>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
