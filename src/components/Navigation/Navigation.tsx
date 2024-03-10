@@ -1,19 +1,19 @@
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useCallback, useRef, useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Navigation.module.scss';
 
 interface Route {
-  href: string;
+  to: string;
   title: string;
 }
 
 const routes: Route[] = [
-  { href: '#', title: 'ПЛАН ОБУЧЕНИЯ' },
-  { href: '#', title: 'РЕКОМЕНДАЦИИ' },
-  { href: '#', title: 'ИДЕИ' },
-  { href: '#', title: 'ТЕСТ' },
+  { to: '#', title: 'ПЛАН ОБУЧЕНИЯ' },
+  { to: '#', title: 'РЕКОМЕНДАЦИИ' },
+  { to: '#', title: 'ИДЕИ' },
+  { to: '../../pages/Test', title: 'ТЕСТ' },
 ];
 
 const Navigation: React.FC = () => {
@@ -47,15 +47,15 @@ const Navigation: React.FC = () => {
       <nav ref={navRef} className={isNavActive ? 'active' : 'nav'}>
         <div className='border'>
           {' '}
-          <a href='/'> </a>
+          <Link to='/'> </Link>
         </div>
 
         <ul ref={navRef}>
           {routes.map((route, i) => {
-            const { href, title } = route;
+            const { to, title } = route;
             return (
               <li key={i}>
-                <a href={href}>{title}</a>
+                <Link to={to}>{title}</Link>
               </li>
             );
           })}

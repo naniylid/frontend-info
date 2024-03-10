@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/pages/StudyPlan.module.scss';
-import PlanItems from '../components/PlanContent/PlanItems';
+import PlanItems from './PlanContent/PlanItems';
 
 const StudyPlan: React.FC = () => {
   return (
