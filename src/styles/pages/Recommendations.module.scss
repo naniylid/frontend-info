@@ -1,0 +1,367 @@
+@import "../colors&fonts.scss";
+
+.mrgn-bottom {
+  margin-bottom: 60px;
+}
+
+.recommendations {
+  position: absolute;
+  margin-top: 4543px;
+  width: 100%;
+  margin-left: 138px;
+
+  h1 {
+    font-family: "JetBrains Mono NL Light";
+    font-size: 75px;
+    line-height: 70px;
+    width: 360px;
+    color: $purpleColor;
+  }
+  .main-line {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 6px;
+    border-left: 2px solid $purpleColor;
+    height: 2271px;
+  }
+}
+
+.recomm-items {
+  margin: 66px 0 0 60px;
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 129px;
+  }
+
+  h2 {
+    color: $purpleColor;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  .line {
+    margin-top: 6px;
+    border-left: 1px solid #4b4b4b;
+  }
+
+  .link {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #fff;
+
+    &_school {
+      width: 219px;
+      height: 42px;
+      border-radius: 49px;
+      border: 1px solid $purpleColor;
+      background-color: #000;
+      padding: 7px 22px;
+      position: relative;
+      z-index: 0;
+
+      &:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 49px;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+
+      &:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 49px;
+      }
+
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    }
+
+    &_challenges {
+      width: 453px;
+      height: 42px;
+      padding: 7px 61px;
+      background-color: rgba(255, 255, 255, 0.48);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.33);
+      border-radius: 40px;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgba(#000, 0.48);
+        color: $purpleColor;
+        border: 1px solid rgba($purpleColor, 0.33);
+      }
+
+      &:nth-of-type(2) {
+        z-index: 3;
+      }
+    }
+  }
+
+  .schools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 28px 0 0 57px;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+  }
+
+  .challenges {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 25.5px 0 0 55.5px;
+
+    &_decor {
+      position: absolute;
+    }
+
+    .circle-svg {
+      max-width: 60px;
+      top: 28%;
+      left: 7%;
+      z-index: 2;
+    }
+
+    .star-svg {
+      max-width: 112px;
+      top: 7%;
+      left: 88%;
+      z-index: -1;
+    }
+
+    .triangle-svg {
+      max-width: 64px;
+      top: 79%;
+      left: 75%;
+      z-index: -1;
+    }
+  }
+
+  .slider-lit {
+    padding: 38px 0 0 57px;
+    max-width: 1206px;
+  }
+  .btn-slider {
+    margin-bottom: 28px;
+    width: 28px;
+    height: 28px;
+    // padding: 8px 11px;
+    font-size: 16px;
+    color: #d9d9d9;
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    transition: all 0.3 ease-in-out;
+
+    &:first-child {
+      margin-right: 9px;
+    }
+
+    &:hover {
+      color: $purpleColor;
+      border: 1px solid $purpleColor;
+    }
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+  .slider {
+    display: flex;
+    gap: 14px;
+
+    &-card {
+      width: 567px !important;
+      height: 308px;
+      padding: 58px 49px 102px 49px;
+      font-size: 19px;
+      background: linear-gradient(44deg, #adadad 0%, #414141 100%);
+      border: 1px solid $purpleColor;
+      border-radius: 36px;
+
+      &--digit {
+        display: inline-block;
+        color: $purpleColor;
+        margin-bottom: 14px;
+      }
+      &--title {
+        margin-bottom: 28px;
+        font-weight: 600;
+        line-height: 147%;
+        color: #000;
+        text-transform: uppercase;
+      }
+      &--desc {
+        font-style: italic;
+        font-weight: 300;
+        color: #eee;
+      }
+    }
+  }
+
+  .webs {
+    display: grid;
+    grid-template-columns: repeat(2, 566px);
+    gap: 35px 17px;
+    padding: 21px 0 0 57px;
+
+    &-item {
+      &--info {
+        padding: 11px 0 0 58px;
+
+        p {
+          margin-bottom: 24px;
+          color: #808080;
+        }
+        // TODO: оптимизировать
+        a {
+          position: relative;
+          z-index: 0;
+          padding: 7px 13px;
+          font-size: 19px;
+          color: #fff;
+          text-transform: uppercase;
+          border: 1px solid $purpleColor;
+          border-radius: 49px;
+
+          &:before {
+            content: "";
+            background: linear-gradient(
+              45deg,
+              #ff0000,
+              #ff7300,
+              #fffb00,
+              #48ff00,
+              #00ffd5,
+              #002bff,
+              #7a00ff,
+              #ff00c8,
+              #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 49px;
+          }
+
+          &:hover:before {
+            opacity: 1;
+          }
+
+          &:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 49px;
+          }
+
+          @keyframes glowing {
+            0% {
+              background-position: 0 0;
+            }
+            50% {
+              background-position: 400% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .games {
+    display: grid;
+    grid-template-columns: repeat(2, 487px);
+    gap: 33px 43px;
+    padding: 31px 0 0 57px;
+
+    &-item {
+      &--link {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 147%;
+        text-transform: uppercase;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $purpleColor;
+          font-weight: 700;
+        }
+      }
+      &--text {
+        margin-top: 9px;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: #808080;
+      }
+    }
+  }
+}
