@@ -4,13 +4,35 @@ import { useInView } from 'react-intersection-observer';
 import { htmlButtons, jsButtons, frameButtons } from './Buttons';
 
 const PlanItems: React.FC = () => {
-  const { ref, inView } = useInView({
+  const { ref: firstRef, inView: firstInView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { ref: secondRef, inView: secondInView } = useInView({
+    threshold: 0.2,
+  });
+
+  const { ref: thirdRef, inView: thirdInView } = useInView({
+    threshold: 0.2,
+  });
+
+  const { ref: fourRef, inView: fourInView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { ref: fiveRef, inView: fiveInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: sixrRef, inView: sixInView } = useInView({
     threshold: 0.2,
   });
 
   return (
     <div className='plan-items'>
-      <div ref={ref} className={`plan-items_block ${inView ? 'plan-items_block_loading' : ''}`}>
+      <div
+        ref={firstRef}
+        className={`plan-items_block ${firstInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>HTML И CSS</h2>
         <div className='line'>
           <p>
@@ -31,7 +53,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className={`plan-items_block`}>
+      <div
+        ref={secondRef}
+        className={`plan-items_block ${secondInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>JavaScript</h2>
         <div className='line '>
           <p>
@@ -66,7 +91,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className={`plan-items_block`}>
+      <div
+        ref={thirdRef}
+        className={`plan-items_block ${thirdInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>React, Angular или Vue</h2>
         <div className='line '>
           <p>
@@ -88,7 +116,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block loading'>
+      <div
+        ref={thirdRef}
+        className={`plan-items_block ${thirdInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>TypeScript</h2>
         <div className='line '>
           <p>
@@ -104,7 +135,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block loading'>
+      <div
+        ref={fourRef}
+        className={`plan-items_block ${fourInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>Алгоритмы</h2>
         <div className='line '>
           <p>
@@ -122,7 +156,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block loading'>
+      <div
+        ref={fiveRef}
+        className={`plan-items_block ${fiveInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>Accessibility, A11y</h2>
         <div className='line '>
           <p>Рекомендую знать, но не обязательно</p>
@@ -135,7 +172,10 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className='plan-items_block loading'>
+      <div
+        ref={sixrRef}
+        className={`plan-items_block ${sixInView ? 'plan-items_block_loading' : ''}`}
+      >
         <h2>Дополнительно нужно знать</h2>
         <div className='line '>
           <div className='plan-items_block--list'>
