@@ -192,6 +192,30 @@
     padding: 38px 0 0 57px;
     max-width: 1206px;
   }
+  .btn-slider {
+    margin-bottom: 28px;
+    width: 28px;
+    height: 28px;
+    // padding: 8px 11px;
+    font-size: 16px;
+    color: #d9d9d9;
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    transition: all 0.3 ease-in-out;
+
+    &:first-child {
+      margin-right: 9px;
+    }
+
+    &:hover {
+      color: $purpleColor;
+      border: 1px solid $purpleColor;
+    }
+    &:active {
+      transform: scale(1.2);
+    }
+  }
   .slider {
     display: flex;
     gap: 14px;
@@ -201,8 +225,7 @@
       height: 308px;
       padding: 58px 49px 102px 49px;
       font-size: 19px;
-      // TODO: что не так.....
-      background: linear-gradient(44deg, #adadad 0%, #cdcdcd 100%);
+      background: linear-gradient(44deg, #adadad 0%, #414141 100%);
       border: 1px solid $purpleColor;
       border-radius: 36px;
 
@@ -224,11 +247,6 @@
         color: #eee;
       }
     }
-
-    // &--card.active {
-    //   opacity: 1;
-    //   transform: translateX(0);
-    // }
   }
 
   .webs {

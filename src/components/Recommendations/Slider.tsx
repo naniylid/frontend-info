@@ -17,8 +17,12 @@ const Slider: React.FC = () => {
 
   return (
     <div className="line slider-lit">
-      <button onClick={handlePrev}>Prev</button>
-      <button onClick={handleNext}>Next</button>
+      <button className="btn-slider" onClick={handlePrev}>
+        &#60;
+      </button>
+      <button className="btn-slider" onClick={handleNext}>
+        &#62;
+      </button>
       <Swiper
         spaceBetween={14}
         slidesPerView={2}
