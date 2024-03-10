@@ -13,6 +13,14 @@ interface IWeb {
   };
 }
 
+interface IGames {
+  title: {
+    href: string;
+    text: string;
+  };
+  desc: string;
+}
+
 export const slides: ISlide[] = [
   {
     digit: 1,
@@ -169,5 +177,36 @@ export const webItems: IWeb[] = [
       href: "#",
       titleBtn: "GitHub →",
     },
+  },
+];
+
+export const games: IGames[] = [
+  {
+    title: {
+      href: "https://cssgridgarden.com/#ru",
+      text: "Grid Garden",
+    },
+    desc: "Мини-игра для изучения CSS Grid Layout. Здесь вы размещаете растения на виртуальном садовом участке, используя свойства Grid.",
+  },
+  {
+    title: {
+      href: "https://flexboxfroggy.com/#ru",
+      text: "Flexbox Froggy",
+    },
+    desc: "Аналогичная Grid Garden мини-игра, в которой вам нужно помогать лягушонку Фроги и его друзьям, используя CSS Flexbox",
+  },
+  {
+    title: {
+      href: "https://codecombat.com/",
+      text: "CodeCombat",
+    },
+    desc: "Платформа, на которой вы пишете код, чтобы управлять вашим персонажем в игровом мире. Есть задачи и уровни для изучения JavaScript и Python.",
+  },
+  {
+    title: {
+      href: "https://screeps.com/",
+      text: "Screeps",
+    },
+    desc: "MMO RTS-игра, в которой вы программировать своих 'крипсов' (мелких существ) на JavaScript для управления ресурсами и атаки других игроков.",
   },
 ];

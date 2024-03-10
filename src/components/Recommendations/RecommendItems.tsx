@@ -5,7 +5,7 @@ import circle from "../../assets/image/circle.svg";
 import star from "../../assets/image/star.svg";
 import triangle from "../../assets/image/triangle.svg";
 import Slider from "./Slider";
-import { webItems } from "./types";
+import { games, webItems } from "./types";
 
 const RecommendItems: React.FC = () => {
   return (
@@ -95,7 +95,22 @@ const RecommendItems: React.FC = () => {
       </section>
       <section className="recomm-items_block">
         <h2>Игры для обучения</h2>
-        <div className="line games"></div>
+        <div className="line games">
+          {games.map((game) => {
+            return (
+              <div className="games-item">
+                <a
+                  className="games-item--link"
+                  href={game.title.href}
+                  target="_blank"
+                >
+                  {game.title.text}
+                </a>
+                <p className="games-item--text">{game.desc}</p>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </div>
   );
