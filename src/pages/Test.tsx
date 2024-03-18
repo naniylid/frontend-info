@@ -7,8 +7,8 @@ interface TestProps {
   title: string;
 }
 const testButtons: TestProps[] = [
-  { to: '#', title: 'HTML и CSS' },
-  { to: '#', title: 'JavaScript' },
+  { to: '/htmltest', title: 'HTML и CSS' },
+  { to: '/jstest', title: 'JavaScript' },
 ];
 
 const Test: React.FC = () => {
