@@ -1,22 +1,21 @@
 import React from 'react';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
 import Result from './functions/Result';
+import { onClickVariantType } from './types';
 import Game from './functions/Game';
+import {
+  setStep,
+  setCorrect,
+  setQuestions,
+  setLoading,
+  selectJsSlice,
+} from '../../redux/jsTest/slice';
 import './Test.scss';
 
-export type Question = {
-  title: string;
-  variants: string[];
-  correct: number;
-};
-
-export type onClickVariantType = (index: number, question: Question) => void;
-
 const JsTest: React.FC = () => {
-  const [step, setStep] = React.useState(0);
-  const [correct, setCorrect] = React.useState(0);
-  const [questions, setQuestions] = React.useState<Question[]>([]);
-  const [loading, setLoading] = React.useState(true);
+  const dispatch = useDispatch();
+  const { step, correct, questions, loading } = useSelector(selectJsSlice);
 
   React.useEffect(() => {
     const fetchQuestions = async () => {
@@ -24,11 +23,11 @@ const JsTest: React.FC = () => {
         const response = await axios.get(
           `https://api.mockfly.dev/mocks/20fa1b8c-4396-41d7-a173-b685080d475f/jstest`,
         );
-        setQuestions(response.data);
+        dispatch(setQuestions(response.data));
       } catch (error) {
         console.error('Failed to fetch questions: ', error);
       } finally {
-        setLoading(false);
+        dispatch(setLoading(false));
       }
     };
 
@@ -36,10 +35,10 @@ const JsTest: React.FC = () => {
   }, []);
 
   const onClickVariant: onClickVariantType = (index, question) => {
-    setStep(step + 1);
+    dispatch(setStep(step + 1));
 
     if (index === question.correct) {
-      setCorrect(correct + 1);
+      dispatch(setCorrect(correct + 1));
     }
   };
 
