@@ -3,6 +3,7 @@ import React, { useCallback, useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Navigation.module.scss';
+import AnimSquares from '../AnimSquares';
 
 interface Route {
   to: string;
@@ -46,8 +47,10 @@ const Navigation: React.FC = () => {
     <>
       <nav ref={navRef} className={isNavActive ? 'active' : 'nav'}>
         <div className='border'>
-          {' '}
-          <Link to='/'> </Link>
+          <Link to='/'>
+            {' '}
+            <AnimSquares />{' '}
+          </Link>
         </div>
 
         <ul ref={navRef}>
