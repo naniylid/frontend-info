@@ -1,13 +1,8 @@
-
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useCallback, useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Navigation.module.scss';
-import AnimSquares from '../AnimSquares';
-
-
-
 
 interface Route {
   to: string;
@@ -15,12 +10,10 @@ interface Route {
 }
 
 const routes: Route[] = [
-
   { to: '', title: 'ПЛАН ОБУЧЕНИЯ' },
   { to: '#', title: 'РЕКОМЕНДАЦИИ' },
   { to: '#', title: 'ИДЕИ' },
   { to: '/test', title: 'ТЕСТ' },
-
 ];
 
 const Navigation: React.FC = () => {
@@ -36,29 +29,24 @@ const Navigation: React.FC = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const showNavbar = useCallback(() => {
     if (navRef.current) {
-      navRef.current!.classList.toggle("responsive_nav");
+      navRef.current!.classList.toggle('responsive_nav');
     }
   }, []);
 
   return (
     <>
-
       <nav ref={navRef} className={isNavActive ? 'active' : 'nav'}>
         <div className='border'>
-          <Link to='/'>
-            {' '}
-            <AnimSquares />{' '}
-          </Link>
-
+          <Link to='/'></Link>
         </div>
 
         <ul ref={navRef}>
@@ -70,11 +58,11 @@ const Navigation: React.FC = () => {
               </li>
             );
           })}
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <button className='nav-btn nav-close-btn' onClick={showNavbar}>
             <FaTimes />
           </button>
         </ul>
-        <button className="nav-btn" onClick={showNavbar}>
+        <button className='nav-btn' onClick={showNavbar}>
           <FaBars />
         </button>
       </nav>

@@ -1,11 +1,16 @@
 .header {
   width: 100%;
 
-  h1 {
-    margin: 134px 0 0 170px;
-    position: absolute;
-    font-size: 114px;
+  .title-block {
+    display: flex;
+
+    h1 {
+      margin: 134px 0 0 170px;
+      position: absolute;
+      font-size: 114px;
+    }
   }
+
   .header-text {
     position: absolute;
     margin: 330px 0 0 390px;
