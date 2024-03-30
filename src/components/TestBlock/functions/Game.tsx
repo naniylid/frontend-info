@@ -1,5 +1,5 @@
 import React from 'react';
-import { onClickVariantType, Question } from '../HtmlTest';
+import { onClickVariantType, Question } from '../types';
 
 const Game: React.FC<{
   step: number;
