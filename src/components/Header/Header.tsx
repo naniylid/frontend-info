@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.module.scss';
+import AnimSquares from '../AnimSquares';
 
 const Header: React.FC = () => {
   const text = 'ПРИВЕТ!';
@@ -17,7 +18,12 @@ const Header: React.FC = () => {
 
   return (
     <div className='header'>
-      <h1>{displayedText} </h1>
+      <div className='title-block'>
+        <h1>{displayedText} </h1>
+        <div>
+          <AnimSquares />
+        </div>
+      </div>
       <div className='header-text'>
         <p>Добро пожаловать на наш сайт!</p>
         <p>
