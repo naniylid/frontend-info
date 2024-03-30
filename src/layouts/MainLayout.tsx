@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Navigation from '../components/Navigation/Navigation';
 
-const MainLayout = () => {
+const MainLayout: React.FC = () => {
   return (
     <div className='wrapper'>
       <Navigation />
