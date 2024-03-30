@@ -1,17 +1,25 @@
-import Header from "./components/Header/Header";
-import Navigation from "./components/Navigation/Navigation";
-import numbers from "./assets/image/numbers.svg";
-import StudyPlan from "./pages/StudyPlan";
-import Recommendations from "./pages/Recommendations";
+
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Test from './pages/Test';
+import MainLayout from './layouts/MainLayout';
+import HtmlTest from './components/TestBlock/HtmlTest';
+import JsTest from './components/TestBlock/JsTest';
+
 
 function App() {
   return (
     <>
-      <Navigation />
-      <img className="numbers" src={numbers} alt="" />
-      <Header />
-      <StudyPlan />
-      <Recommendations />
+
+      <Routes>
+        <Route path='/' element={<MainLayout />}>
+          <Route path='' element={<Home />} />
+          <Route path='/test' element={<Test />} />
+          <Route path='/htmltest' element={<HtmlTest />} />
+          <Route path='/jstest' element={<JsTest />} />
+        </Route>
+      </Routes>
+
     </>
   );
 }

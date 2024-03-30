@@ -1,11 +1,42 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { htmlButtons, jsButtons, frameButtons } from "./Buttons";
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
+import { htmlButtons, jsButtons, frameButtons } from './Buttons';
+
 
 const PlanItems: React.FC = () => {
+  const { ref: firstRef, inView: firstInView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { ref: secondRef, inView: secondInView } = useInView({
+    threshold: 0.2,
+  });
+
+  const { ref: thirdRef, inView: thirdInView } = useInView({
+    threshold: 0.2,
+  });
+
+  const { ref: fourRef, inView: fourInView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { ref: fiveRef, inView: fiveInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: sixrRef, inView: sixInView } = useInView({
+    threshold: 0.2,
+  });
+
   return (
-    <div className="plan-items">
-      <div className="plan-items_block">
+
+    <div className='plan-items'>
+      <div
+        ref={firstRef}
+        className={`plan-items_block ${firstInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>HTML И CSS</h2>
         <div className="line">
           <p>
@@ -14,10 +45,10 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             {htmlButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -26,7 +57,12 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={secondRef}
+        className={`plan-items_block ${secondInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>JavaScript</h2>
         <div className="line ">
           <p>
@@ -52,10 +88,10 @@ const PlanItems: React.FC = () => {
           </div>
           <ul>
             {jsButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -64,7 +100,12 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={thirdRef}
+        className={`plan-items_block ${thirdInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>React, Angular или Vue</h2>
         <div className="line ">
           <p>
@@ -74,10 +115,10 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             {frameButtons.map((route, i) => {
-              const { href, title } = route;
+              const { to, title } = route;
               return (
                 <li key={i}>
-                  <Link to={href}>
+                  <Link to={to} target='_blank'>
                     <button>{title}</button>
                   </Link>
                 </li>
@@ -86,7 +127,12 @@ const PlanItems: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={thirdRef}
+        className={`plan-items_block ${thirdInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>TypeScript</h2>
         <div className="line ">
           <p>
@@ -95,14 +141,21 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             <li>
-              <Link to="/">
+
+              <Link to='/' target='_blank'>
+
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={fourRef}
+        className={`plan-items_block ${fourInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>Алгоритмы</h2>
         <div className="line ">
           <p>
@@ -114,27 +167,41 @@ const PlanItems: React.FC = () => {
           </p>
           <ul>
             <li>
-              <Link to="/">
+
+              <Link to='/' target='_blank'>
+
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={fiveRef}
+        className={`plan-items_block ${fiveInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>Accessibility, A11y</h2>
         <div className="line ">
           <p>Рекомендую знать, но не обязательно</p>
           <ul>
             <li>
-              <Link to="/">
+
+              <Link to='/' target='_blank'>
+
                 <button>ЗАПОЛНИТЬ</button>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="plan-items_block">
+
+      <div
+        ref={sixrRef}
+        className={`plan-items_block ${sixInView ? 'plan-items_block_loading' : ''}`}
+      >
+
         <h2>Дополнительно нужно знать</h2>
         <div className="line ">
           <div className="plan-items_block--list">
@@ -159,7 +226,9 @@ const PlanItems: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    <Link to="/">
+
+                    <Link to='/' target='_blank'>
+
                       <button>Git →</button>
                     </Link>
                   </li>
@@ -177,7 +246,9 @@ const PlanItems: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    <Link to="/">
+
+                    <Link to='/' target='_blank'>
+
                       <button>WEBPACK →</button>
                     </Link>
                   </li>
@@ -195,13 +266,15 @@ const PlanItems: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    <Link to="/">
+
+                    <Link to='/' target='_blank'>
                       <button>Теория →</button>
                     </Link>
-                    <Link to="/">
+                    <Link to='/' target='_blank'>
                       <button>Теория →</button>
                     </Link>
-                    <Link to="/">
+                    <Link to='/' target='_blank'>
+
                       <button>Теория →</button>
                     </Link>
                   </li>

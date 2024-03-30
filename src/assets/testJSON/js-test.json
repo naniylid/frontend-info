@@ -178,5 +178,75 @@
       "insert(), delete(), trim()"
     ],
     "correct": 0
+  },
+  {
+    "title": "Какая функция используется для определения длины массива?",
+    "variants": ["length()", "size()", "count()", "Array.length"],
+    "correct": 3
+  },
+  {
+    "title": "Что вернет выражение typeof null?",
+    "variants": ["\"null\"", "\"object\"", "\"undefined\"", "\"string\""],
+    "correct": 1
+  },
+  {
+    "title": "Как добавить элемент в конец массива в JavaScript?",
+    "variants": [
+      "array.add(element)",
+      "array.insert(element)",
+      "array.push(element)",
+      "array.append(element)"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Какой метод используется для удаления последнего элемента из массива?",
+    "variants": ["array.removeLast()", "array.pop()", "array.deleteLast()", "array.removeEnd()"],
+    "correct": 1
+  },
+  {
+    "title": "Что делает метод forEach() у массивов в JavaScript?",
+    "variants": [
+      "Производит отображение элементов массива в новый массив",
+      "Изменяет размер массива",
+      "Выполняет операцию над каждым элементом массива",
+      "Сортирует массив в порядке убывания"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как проверить, содержит ли массив определенный элемент в JavaScript?",
+    "variants": [
+      "array.contains(element)",
+      "array.includes(element)",
+      "array.has(element)",
+      "array.indexOf(element)"
+    ],
+    "correct": 1
+  },
+  {
+    "title": "Что такое стрелочные функции в JavaScript?",
+    "variants": [
+      "Функции с областью видимости внутри блока кода",
+      "Функции, которые автоматически преобразуются в строки",
+      "Короткий синтаксис для создания функций, который не создает своего собственного контекста this",
+      "Функции, которые можно передавать в качестве аргументов другим функциям"
+    ],
+    "correct": 2
+  },
+  {
+    "title": "Как получить случайное число от 0 до 1 в JavaScript?",
+    "variants": ["random(0, 1)", "Math.random()", "randomNumber()", "Math.random(0, 1)"],
+    "correct": 1
+  },
+  {
+    "title": "Что такое DOM в контексте JavaScript?",
+    "variants": [
+      "Модель объектов документа, представляющая структуру HTML-документа в виде дерева",
+      "Специальная функция для создания HTML-элементов",
+      "Специальный синтаксис для манипулирования HTML-кодом",
+      "Функция для определения стилей элементов на веб-странице"
+    ],
+    "correct": 0
   }
 ]
