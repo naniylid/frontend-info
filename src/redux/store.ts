@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import htmlSlice from './htmlTest/slice';
-import jsSlice from './jsTest/slice';
+import htmlSlice from '../components/TestBlock/html-redux/slice';
+import jsSlice from '../components/TestBlock/js-redux/slice';
+import headerSlice from '../components/Header/HeaderSice';
 
 export const store = configureStore({
   reducer: {
+    headerSlice,
     htmlSlice,
     jsSlice,
   },

@@ -1,14 +1,17 @@
 .header {
   width: 100%;
 
-  .title-block {
-    display: flex;
+  h1 {
+    margin: 134px 0 0 170px;
+    position: absolute;
+    font-size: 114px;
+  }
 
-    h1 {
-      margin: 134px 0 0 170px;
-      position: absolute;
-      font-size: 114px;
-    }
+  &_item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 150px;
   }
 
   .header-text {

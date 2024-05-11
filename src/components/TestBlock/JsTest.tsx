@@ -4,14 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import Result from './functions/Result';
 import { onClickVariantType } from './types';
 import Game from './functions/Game';
-import {
-  setStep,
-  setCorrect,
-  setQuestions,
-  setLoading,
-  selectJsSlice,
-} from '../../redux/jsTest/slice';
+import { setStep, setCorrect, setQuestions, setLoading, selectJsSlice } from './js-redux/slice';
 import './Test.scss';
+
+const JS_API_KEY: string = import.meta.env.VITE_JS_API_KEY as string;
 
 const JsTest: React.FC = () => {
   const dispatch = useDispatch();
@@ -20,9 +16,7 @@ const JsTest: React.FC = () => {
   React.useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(
-          `https://api.mockfly.dev/mocks/20fa1b8c-4396-41d7-a173-b685080d475f/jstest`,
-        );
+        const response = await axios.get(`https://api.mockfly.dev/mocks/20${JS_API_KEY}/jstest`);
         dispatch(setQuestions(response.data));
       } catch (error) {
         console.error('Failed to fetch questions: ', error);

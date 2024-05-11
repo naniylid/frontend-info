@@ -1,0 +1,161 @@
+@import '../../styles/colors&fonts.scss';
+
+.ideas {
+  position: absolute;
+  margin-top: 7000px;
+  margin-left: 138px;
+
+  h1 {
+    font-family: 'JetBrains Mono NL';
+    font-size: 75px;
+    line-height: 70px;
+    color: $yellowColor;
+  }
+
+  .main-line {
+    position: absolute;
+    margin-left: 7px;
+    margin-top: 6px;
+    border-left: 2px solid $yellowColor;
+    height: 400px;
+  }
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 34px 0 0 64px;
+}
+
+.card {
+  margin: 15px;
+  transition: all 0.2s ease-in-out;
+  width: 277px;
+  height: 150px;
+  border: 1px solid $yellowColor;
+  background: rgb(80, 79, 79);
+  background: linear-gradient(222deg, rgba(80, 79, 79, 1) 2%, rgba(229, 229, 229, 1) 100%);
+  border-radius: 6px;
+
+  &:hover {
+    background: rgb(255, 255, 0);
+    background: linear-gradient(
+      218deg,
+      rgba(255, 255, 0, 1) 0%,
+      rgba(138, 138, 0, 1) 46%,
+      rgba(138, 138, 0, 1) 46%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  // &:before {
+  //   content: '';
+  //   width: 50%;
+  //   height: 20px;
+  //   border-radius: 20px 6px 0 0;
+  //   background: $yellowColor;
+  //   position: absolute;
+  //   top: -18px;
+  //   right: -0.8px;
+  // }
+
+  &:hover {
+    .card__inner {
+      transform: scale(1.05);
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    padding: 100px 0 0 20px;
+    position: relative;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+    font-size: 22.6px;
+    line-height: 33.3px;
+    color: #000;
+    text-transform: uppercase;
+
+    &:after {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  //Expander
+  &__expander {
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(229, 229, 229, 1);
+    box-shadow: 1px 2px 38px 3px rgb(153, 153, 35);
+    border-radius: 6px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  &.is-collapsed {
+    .card__inner {
+      &:after {
+        content: '';
+        opacity: 0;
+      }
+    }
+    .card__expander {
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      opacity: 0;
+    }
+  }
+
+  &.is-expanded {
+    .card__inner {
+      &:after {
+        content: '';
+        opacity: 1;
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 15px);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #333a45;
+      }
+    }
+
+    .card__expander {
+      max-height: 1000px;
+      min-height: 200px;
+      overflow: visible;
+      margin-top: 30px;
+      opacity: 1;
+    }
+
+    &:hover {
+      .card__inner {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.is-inactive {
+    .card__inner {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      .card__inner {
+        transform: scale(1);
+      }
+    }
+  }
+}

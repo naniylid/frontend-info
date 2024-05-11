@@ -5,14 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import Result from './functions/Result';
 import Game from './functions/Game';
 import { onClickVariantType } from './types';
-import {
-  setStep,
-  setCorrect,
-  setQuestions,
-  setLoading,
-  selectHtmlSlice,
-} from '../../redux/htmlTest/slice';
+import { setStep, setCorrect, setQuestions, setLoading, selectHtmlSlice } from './html-redux/slice';
 import './Test.scss';
+
+const HTML_API_KEY: string = import.meta.env.VITE_HTML_API_KEY as string;
 
 const HtmlTest: React.FC = () => {
   const dispatch = useDispatch();
@@ -21,7 +17,7 @@ const HtmlTest: React.FC = () => {
   React.useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`https://65746aecf941bda3f2afba20.mockapi.io/htmlcss`);
+        const response = await axios.get(`https://65746${HTML_API_KEY}.mockapi.io/htmlcss`);
         dispatch(setQuestions(response.data));
       } catch (error) {
         console.error('Failed to fetch questions: ', error);
