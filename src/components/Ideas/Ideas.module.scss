@@ -1,4 +1,4 @@
-@import '../../styles/colors&fonts.scss';
+@import "../../styles/colors&fonts.scss";
 
 .ideas {
   position: absolute;
@@ -6,7 +6,7 @@
   margin-left: 138px;
 
   h1 {
-    font-family: 'JetBrains Mono NL';
+    font-family: "JetBrains Mono NL";
     font-size: 75px;
     line-height: 70px;
     color: $yellowColor;
@@ -33,30 +33,23 @@
   height: 150px;
   border: 1px solid $yellowColor;
   background: rgb(80, 79, 79);
-  background: linear-gradient(222deg, rgba(80, 79, 79, 1) 2%, rgba(229, 229, 229, 1) 100%);
+  background: linear-gradient(
+    222deg,
+    rgba(80, 79, 79, 1) 2%,
+    rgba(229, 229, 229, 1) 100%
+  );
   border-radius: 6px;
 
   &:hover {
     background: rgb(255, 255, 0);
     background: linear-gradient(
-      218deg,
+      26deg,
       rgba(255, 255, 0, 1) 0%,
       rgba(138, 138, 0, 1) 46%,
       rgba(138, 138, 0, 1) 46%,
       rgba(0, 0, 0, 1) 100%
     );
   }
-
-  // &:before {
-  //   content: '';
-  //   width: 50%;
-  //   height: 20px;
-  //   border-radius: 20px 6px 0 0;
-  //   background: $yellowColor;
-  //   position: absolute;
-  //   top: -18px;
-  //   right: -0.8px;
-  // }
 
   &:hover {
     .card__inner {
@@ -101,7 +94,7 @@
   &.is-collapsed {
     .card__inner {
       &:after {
-        content: '';
+        content: "";
         opacity: 0;
       }
     }
@@ -117,7 +110,7 @@
   &.is-expanded {
     .card__inner {
       &:after {
-        content: '';
+        content: "";
         opacity: 1;
         display: block;
         height: 0;

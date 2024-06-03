@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
+import { ICard } from "./types";
 
-export const Card: React.FC = () => {
+export const Card: React.FC<ICard> = ({ title, desc, stack, url }) => {
   const [isExpanded, setIsExpanded] = React.useState(false); // Состояние для открытия/закрытия карточки
 
   const handleCardClick = () => {
@@ -8,14 +9,18 @@ export const Card: React.FC = () => {
   };
 
   return (
-    <div className={`card ${isExpanded ? 'is-expanded' : 'is-collapsed'}`}>
-      <div className='card__inner js-expander' onClick={handleCardClick}>
-        <span>Card</span>
+    <div className={`card ${isExpanded ? "is-expanded" : "is-collapsed"}`}>
+      <div className="card__inner js-expander" onClick={handleCardClick}>
+        <span>{title}</span>
       </div>
       {isExpanded && (
-        <div className='card__expander'>
-          <i className='fa fa-close js-collapser' onClick={handleCardClick}></i>
-          Expander
+        <div className="card__expander">
+          <i className="fa fa-close js-collapser" onClick={handleCardClick}></i>
+          <p>{desc}</p>
+          <p>{stack}</p>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            Project Link
+          </a>
         </div>
       )}
     </div>
