@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import htmlSlice from '../components/TestBlock/html-redux/slice';
-import jsSlice from '../components/TestBlock/js-redux/slice';
+import htmlSlice from '../components/TestBlock/HtmlTest/slice';
+import jsSlice from '../components/TestBlock/JsTest/slice';
 import headerSlice from '../components/Header/HeaderSice';
 
 export const store = configureStore({
