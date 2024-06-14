@@ -1,22 +1,23 @@
 import React from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import Result from './functions/Result';
-import { onClickVariantType } from './types';
-import Game from './functions/Game';
-import { setStep, setCorrect, setQuestions, setLoading, selectJsSlice } from './js-redux/slice';
-import './Test.scss';
 
-const JS_API_KEY: string = import.meta.env.VITE_JS_API_KEY as string;
+import Result from '../functions/Result';
+import Game from '../functions/Game';
+import { onClickVariantType } from '../types';
+import { setStep, setCorrect, setQuestions, setLoading, selectHtmlSlice } from './slice';
+import '../Test.scss';
 
-const JsTest: React.FC = () => {
+const HTML_API_KEY: string = import.meta.env.VITE_HTML_API_KEY as string;
+
+const HtmlTest: React.FC = () => {
   const dispatch = useDispatch();
-  const { step, correct, questions, loading } = useSelector(selectJsSlice);
+  const { step, correct, questions, loading } = useSelector(selectHtmlSlice);
 
   React.useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`https://api.mockfly.dev/mocks/20${JS_API_KEY}/jstest`);
+        const response = await axios.get(`https://65746${HTML_API_KEY}.mockapi.io/htmlcss`);
         dispatch(setQuestions(response.data));
       } catch (error) {
         console.error('Failed to fetch questions: ', error);
@@ -59,4 +60,4 @@ const JsTest: React.FC = () => {
   }
 };
 
-export default JsTest;
+export default HtmlTest;
