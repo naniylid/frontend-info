@@ -1,8 +1,14 @@
-@import "./allModule.scss";
-@import "./colors&fonts.scss";
+@import './allModule.scss';
+@import './colors&fonts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: "JetBrains Mono NL";
+  font-family: 'JetBrains Mono NL';
   background-color: black;
   color: white;
   overflow-x: hidden;

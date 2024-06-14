@@ -5,3 +5,10 @@ export type Question = {
 };
 
 export type onClickVariantType = (index: number, question: Question) => void;
+
+export interface TestSliceState {
+  step: number;
+  correct: number;
+  questions: Question[];
+  loading: boolean;
+}

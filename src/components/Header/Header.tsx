@@ -1,30 +1,74 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './Header.module.scss';
-import AnimSquares from '../AnimSquares';
+import AnimSquares from './AnimSquares';
+import { selectHeaderSlice, setIndex, setDisplayedText, setIsVisible } from './HeaderSice';
 
 const Header: React.FC = () => {
   const text = 'ПРИВЕТ!';
-  const [displayedText, setDisplayedText] = useState('');
-  const [index, setIndex] = useState(0);
+  const dispatch = useDispatch();
+  const { displayedText, index, isVisible } = useSelector(selectHeaderSlice);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDisplayedText(text.slice(0, index));
-      setIndex((prevIndex) => (prevIndex + 1) % (text.length + 1));
-    }, 300);
+    const handleScroll = () => {
+      // Проверяем, виден ли компонент на экране
+      const headerElement = document.querySelector('.header');
+      if (headerElement) {
+        const headerRect = headerElement.getBoundingClientRect();
+        const isVisible = headerRect.top >= 0 && headerRect.bottom <= window.innerHeight;
+        dispatch(setIsVisible(isVisible));
+      }
+    };
 
-    return () => clearInterval(interval);
-  }, [index, text]);
+    // Добавляем обработчик события скроллинга
+    window.addEventListener('scroll', handleScroll);
+
+    // Очищаем обработчик события при размонтировании компонента
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout | null = null;
+
+    if (isVisible) {
+      interval = setInterval(() => {
+        const nextChar = text[index];
+
+        const newText = displayedText + nextChar;
+        dispatch(setDisplayedText(newText));
+        dispatch(setIndex(index + 1));
+
+        if (index === text.length) {
+          // Если достигли конца текста, сбрасываем индекс и отображаемый текст
+          dispatch(setIndex(0));
+          dispatch(setDisplayedText(''));
+        }
+      }, 400);
+    } else {
+      // Если компонент стал невидимым, очищаем интервал
+      if (interval) {
+        clearInterval(interval);
+      }
+    }
+
+    // Очищаем интервал при размонтировании компонента
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [dispatch, displayedText, index, isVisible, text]);
 
   return (
-    <div className='header'>
-      <div className='title-block'>
-        <h1>{displayedText} </h1>
-        <div>
+    <header className='header'>
+      <h1>{displayedText}</h1>
+
+      <div className='header-text'>
+        <div className='header_item'>
           <AnimSquares />
         </div>
-      </div>
-      <div className='header-text'>
         <p>Добро пожаловать на наш сайт!</p>
         <p>
           Наш ресурс предназначен для всех, кто самостоятельно изучает фронтенд-разработку. Мы
@@ -42,7 +86,7 @@ const Header: React.FC = () => {
           сегодня!
         </p>
       </div>
-    </div>
+    </header>
   );
 };
 

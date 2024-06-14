@@ -25,3 +25,8 @@ export const frameButtons: Route[] = [
   { to: 'https://www.youtube.com/@jherr/featured', title: 'YouTube →' },
   { to: 'https://www.youtube.com/@ArchakovBlog ', title: 'YouTube →' },
 ];
+
+export const tsButtons: Route[] = [
+  { to: 'https://roadmap.sh/typescript', title: 'Теория →' },
+  { to: 'https://www.schoolsw3.com/typescript/exercise.php', title: 'Практика 1 →' },
+];

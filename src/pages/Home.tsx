@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import StudyPlan from '../components/StudyPlan';
 import Recommendations from '../components/Recommendations';
 import numbers from '../assets/image/numbers.svg';
+import Ideas from '../components/Ideas/Ideas';
 
 const Home: React.FC = () => {
   return (
@@ -12,7 +13,8 @@ const Home: React.FC = () => {
       <img className='numbers' src={numbers} alt='' />
       <Header />
       <StudyPlan />
-      <Recommendations/>
+      <Recommendations />
+      <Ideas />
     </>
   );
 };

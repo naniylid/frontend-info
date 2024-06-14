@@ -5,9 +5,9 @@ const MainLayout: React.FC = () => {
   return (
     <div className='wrapper'>
       <Navigation />
-      <div className='content'>
+      <main className='content'>
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 };

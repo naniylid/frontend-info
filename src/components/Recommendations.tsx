@@ -1,13 +1,13 @@
-import "../styles/pages/Recommendations.module.scss";
-import RecommendItems from "../components/Recommendations/RecommendItems";
+import '../styles/pages/Recommendations.module.scss';
+import RecommendItems from '../components/Recommendations/RecommendItems';
 
 const Recommendations: React.FC = () => {
   return (
-    <div className="recommendations">
+    <section className='recommendations'>
       <h1>РЕКОМЕНДАЦИИ</h1>
-      <div className="main-line"></div>
+      <div className='main-line'></div>
       <RecommendItems />
-    </div>
+    </section>
   );
 };
 
