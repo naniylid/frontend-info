@@ -16,9 +16,14 @@ export const Card: React.FC<ICard> = ({ title, desc, stack, url }) => {
       {isExpanded && (
         <div className="card__expander">
           <i className="fa fa-close js-collapser" onClick={handleCardClick}></i>
-          <p>{desc}</p>
-          <p>{stack}</p>
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <p className="card__expander_stack">{stack}</p>
+          <p className="card__expander_desc">{desc}</p>
+          <a
+            className="card__expander_link"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Project Link
           </a>
         </div>
