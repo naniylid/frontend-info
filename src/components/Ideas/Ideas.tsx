@@ -18,6 +18,9 @@ const Ideas: React.FC = () => {
   return (
     <section className='ideas'>
       <h1>ИДЕИ ПРОЕКТОВ</h1>
+      <p className='ideas__text'>
+        Здесь представлены проекты для практики кода, рассчитанные на различные уровни сложности
+      </p>
       <div className='main-line'></div>
       <div className='cards'>
         <Swiper
