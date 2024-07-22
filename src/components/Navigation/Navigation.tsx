@@ -10,9 +10,9 @@ interface Route {
 }
 
 const routes: Route[] = [
-  { to: '', title: 'ПЛАН ОБУЧЕНИЯ' },
-  { to: '#', title: 'РЕКОМЕНДАЦИИ' },
-  { to: '#', title: 'ИДЕИ' },
+  { to: '/#study-plan', title: 'ПЛАН ОБУЧЕНИЯ' },
+  { to: '/#recommendations', title: 'РЕКОМЕНДАЦИИ' },
+  { to: '/#ideas', title: 'ИДЕИ' },
   { to: '/test', title: 'ТЕСТ' },
 ];
 

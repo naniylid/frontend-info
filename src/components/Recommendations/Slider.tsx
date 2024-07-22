@@ -27,7 +27,6 @@ const Slider: React.FC = () => {
         spaceBetween={14}
         slidesPerView={2}
         loop
-        onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}

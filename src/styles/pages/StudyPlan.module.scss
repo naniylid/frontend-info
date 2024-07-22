@@ -1,5 +1,4 @@
 @import '../colors&fonts.scss';
-@import '../components/buttons.scss';
 
 .study-plan {
   position: absolute;
@@ -19,7 +18,7 @@
     margin-left: 10px;
     margin-top: 6px;
     border-left: 2px solid $baseColor;
-    height: 3445px;
+    height: 3890px;
   }
 }
 
@@ -40,25 +39,31 @@
       text-transform: uppercase;
     }
 
-    .line {
+    &--content {
       margin-top: 6px;
       border-left: 1px solid #4b4b4b;
-    }
 
-    p {
-      margin: 0px 0 0 57px;
-      padding-top: 31px;
-      width: 566px;
-      font-size: 19px;
-      line-height: 28px;
-    }
+      p {
+        margin: 0px 0 0 57px;
+        padding-top: 31px;
+        width: 566px;
+        font-size: 19px;
+        line-height: 28px;
+      }
 
-    ul {
-      width: 800px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      margin: 35px 0 0 -37px;
+      ul {
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin: 35px 0 0 -37px;
+
+        li {
+          list-style: none;
+          margin-right: 13px;
+          margin-top: 14px;
+        }
+      }
     }
     &--second-text {
       margin: 7px 0 0 57px;
@@ -78,7 +83,7 @@
         margin: 14px 0 0 115px;
       }
     }
-    .line {
+    .plan-items_block--content {
       margin: 6px 0 0 57px;
     }
 

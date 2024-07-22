@@ -1,4 +1,4 @@
-@import "../colors&fonts.scss";
+@import '../colors&fonts.scss';
 
 .mrgn-bottom {
   margin-bottom: 60px;
@@ -6,12 +6,12 @@
 
 .recommendations {
   position: absolute;
-  margin-top: 4543px;
+  margin-top: 5000px;
   width: 100%;
   margin-left: 138px;
 
   h1 {
-    font-family: "JetBrains Mono NL Light";
+    font-family: 'JetBrains Mono NL Light';
     font-size: 75px;
     line-height: 70px;
     width: 360px;
@@ -63,7 +63,7 @@
       z-index: 0;
 
       &:before {
-        content: "";
+        content: '';
         background: linear-gradient(
           45deg,
           #ff0000,
@@ -96,7 +96,7 @@
 
       &:after {
         z-index: -1;
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
@@ -275,7 +275,7 @@
           border-radius: 49px;
 
           &:before {
-            content: "";
+            content: '';
             background: linear-gradient(
               45deg,
               #ff0000,
@@ -308,7 +308,7 @@
 
           &:after {
             z-index: -1;
-            content: "";
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;

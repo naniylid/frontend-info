@@ -1,3 +1,5 @@
+import { Route } from 'react-router-dom';
+
 interface Route {
   to: string;
   title: string;
@@ -17,6 +19,8 @@ export const jsButtons: Route[] = [
   { to: 'https://learn.javascript.ru', title: 'Теория →' },
   { to: 'https://roadmap.sh/javascript', title: 'Roadmap →' },
   { to: 'https://www.youtube.com/@ivashov/featured', title: 'YouTube →' },
+  { to: 'https://www.youtube.com/@codedojo', title: 'YouTube →' },
+  { to: 'https://youtube.com/@campfireschool?si=MD-MNQvZ1v9pQuEG', title: 'YouTube →' },
 ];
 
 export const frameButtons: Route[] = [
@@ -28,5 +32,26 @@ export const frameButtons: Route[] = [
 
 export const tsButtons: Route[] = [
   { to: 'https://roadmap.sh/typescript', title: 'Теория →' },
-  { to: 'https://www.schoolsw3.com/typescript/exercise.php', title: 'Практика 1 →' },
+  { to: 'https://code-basics.com/ru/languages/typescript', title: 'Курс →' },
+  { to: 'https://www.schoolsw3.com/typescript/exercise.php', title: 'Практика →' },
+];
+
+export const algorithmsButtons: Route[] = [
+  { to: 'https://github.com/trekhleb/javascript-algorithms', title: 'Теория →' },
+  { to: 'https://www.geeksforgeeks.org', title: 'Теория →' },
+  { to: 'https://leetcode.com', title: 'Практика 1 →' },
+  { to: 'https://www.hackerrank.com', title: 'Практика 2 →' },
+];
+
+export const accessibilityButtons: Route[] = [
+  { to: 'https://doka.guide/a11y/chto-takoe-a11y', title: 'Теория →' },
+  { to: 'https://web.dev/learn/accessibility?authuser=1&hl=en', title: 'Теория →' },
+  { to: 'https://developer.mozilla.org/en-US/docs/Learn/Accessibility', title: 'Теория →' },
+];
+
+export const moreButtons: Route[] = [
+  { to: ' https://developer.mozilla.org/ru/docs/Web/HTTP', title: 'HTTP →' },
+  { to: 'https://howhttps.works', title: 'HTTPS 2 →' },
+  { to: 'https://howdns.works', title: 'DNS →' },
+  { to: 'https://youtu.be/XaTwnKLQi4A', title: 'API →' },
 ];

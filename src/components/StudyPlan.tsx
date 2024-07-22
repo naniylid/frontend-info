@@ -5,7 +5,7 @@ import PlanItems from './PlanContent/PlanItems';
 
 const StudyPlan: React.FC = () => {
   return (
-    <section className='study-plan'>
+    <section id='study-plan' className='study-plan'>
       <h1>ПЛАН ОБУЧЕНИЯ</h1>
       <div className='main-line'></div>
       <PlanItems />
