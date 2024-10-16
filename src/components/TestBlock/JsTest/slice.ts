@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TestSliceState } from '../types';
-import { RootState } from '../store';
-import { Question } from '../../components/TestBlock/types';
+import { RootState } from '../../../redux/store';
+import { Question } from '../types';
 
 const initialState: TestSliceState = {
   step: 0,
@@ -10,8 +10,8 @@ const initialState: TestSliceState = {
   loading: true,
 };
 
-const htmlSlice = createSlice({
-  name: 'html',
+const jsSlice = createSlice({
+  name: 'js',
   initialState,
   reducers: {
     setStep(state, action: PayloadAction<number>) {
@@ -29,7 +29,7 @@ const htmlSlice = createSlice({
   },
 });
 
-export const { setStep, setCorrect, setQuestions, setLoading } = htmlSlice.actions;
-export const selectHtmlSlice = (state: RootState) => state.htmlSlice;
+export const { setStep, setCorrect, setQuestions, setLoading } = jsSlice.actions;
+export const selectJsSlice = (state: RootState) => state.jsSlice;
 
-export default htmlSlice.reducer;
+export default jsSlice.reducer;

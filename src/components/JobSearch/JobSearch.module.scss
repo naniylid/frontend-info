@@ -1,0 +1,37 @@
+@import "../../styles/colors&fonts.scss";
+@import "../../styles/mixins.scss";
+
+.job-search {
+  margin-top: 60px;
+  margin-left: 138px;
+
+  h1 {
+    font-family: $light-font;
+    font-size: 75px;
+    line-height: 70px;
+    color: $greenColor;
+  }
+
+  p {
+    max-width: 900px;
+    margin-bottom: 30px;
+  }
+}
+
+.job-search_container {
+  @include border-line_main;
+  border-color: $greenColor;
+}
+
+.job-search_block {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+
+  li {
+    list-style: none;
+  }
+}

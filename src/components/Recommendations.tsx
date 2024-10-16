@@ -1,14 +1,11 @@
 import "../styles/pages/Recommendations.module.scss";
-import RecommendItems from "../components/Recommendations/RecommendItems";
+import { RecommendItems } from "../components/Recommendations/RecommendItems";
 
-const Recommendations: React.FC = () => {
+export const Recommendations: React.FC = () => {
   return (
-    <div className="recommendations">
-      <h1>РЕКОМЕНДАЦИИ</h1>
-      <div className="main-line"></div>
+    <section id="recommendations" className="recommendations">
+      <h2>РЕКОМЕНДАЦИИ</h2>
       <RecommendItems />
-    </div>
+    </section>
   );
 };
-
-export default Recommendations;

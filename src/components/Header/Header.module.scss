@@ -1,20 +1,24 @@
 .header {
-  width: 100%;
+  margin: 134px 0 0 170px;
 
-  .title-block {
-    display: flex;
+  &__title-container {
+    height: 150px;
 
     h1 {
-      margin: 134px 0 0 170px;
-      position: absolute;
       font-size: 114px;
     }
   }
 
+  &_item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 150px;
+  }
+
   .header-text {
-    position: absolute;
-    margin: 330px 0 0 390px;
-    width: 744px;
+    margin: 85px 0 0 220px;
+    max-width: 744px;
     font-size: 19px;
     line-height: 28px;
 

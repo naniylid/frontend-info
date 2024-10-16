@@ -1,8 +1,14 @@
 @import "./allModule.scss";
 @import "./colors&fonts.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "JetBrains Mono NL";
+  font-family: $font-family;
   background-color: black;
   color: white;
   overflow-x: hidden;
@@ -10,6 +16,9 @@ body {
 
 a {
   text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
 .numbers {

@@ -1,10 +1,4 @@
-@import '../../styles/colors&fonts.scss';
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "../../styles/colors&fonts.scss";
 
 nav {
   position: fixed;
@@ -17,7 +11,7 @@ nav {
   grid-template-rows: 1fr;
   height: 76px;
   width: 100%;
-  background: black;
+  background: #000;
 
   .border {
     width: min(100%, 35px);
@@ -33,17 +27,17 @@ nav {
     width: 100%;
 
     li {
-      list-style: none;
       padding-left: 70px;
       font-size: clamp(6px, 2vw, 16px);
-      font-family: 'JetBrains Mono NL Light';
+      font-family: $light-font;
 
       a {
-        text-decoration: none;
         color: white;
 
-        &:hover {
-          color: $baseColor;
+        @media (hover: hover) {
+          &:hover {
+            color: $baseColor;
+          }
         }
       }
     }
@@ -51,20 +45,20 @@ nav {
 
   .nav-btn {
     padding: 5px;
-    cursor: pointer;
+    font-size: 1.8rem;
     background: transparent;
     border: none;
     outline: none;
     visibility: hidden;
     opacity: 0;
-    font-size: 1.8rem;
+    cursor: pointer;
   }
 }
 .active {
-  background-color: white;
+  background-color: #fff;
 
   a {
-    color: black;
+    color: #000;
   }
 }
 
@@ -83,20 +77,20 @@ nav {
       margin-left: calc(100% - 20px);
       visibility: visible;
       opacity: 1;
-      color: white;
+      color: #fff;
     }
 
     ul {
       position: fixed;
       top: -100vh;
       left: 0;
+      z-index: 5;
       height: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      z-index: 5;
       gap: 1.5rem;
       transition: 1s;
 
@@ -105,10 +99,10 @@ nav {
       }
 
       .nav-close-btn {
-        color: white;
         position: absolute;
         top: 2rem;
         right: 2rem;
+        color: #fff;
       }
     }
 
