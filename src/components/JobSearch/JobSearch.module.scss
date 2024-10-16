@@ -1,38 +1,37 @@
-@import '../../styles/colors&fonts.scss';
+@import "../../styles/colors&fonts.scss";
+@import "../../styles/mixins.scss";
 
 .job-search {
-    padding-top: 8300px;
-    margin-left: 138px;
+  margin-top: 60px;
+  margin-left: 138px;
 
-    h1 {
-        font-family: 'JetBrains Mono NL';
-        font-size: 75px;
-        line-height: 70px;
-        color: $greenColor;
-    }
+  h1 {
+    font-family: $light-font;
+    font-size: 75px;
+    line-height: 70px;
+    color: $greenColor;
+  }
 
-    p {
-        max-width: 900px;
-        margin: 30px;
-    }
+  p {
+    max-width: 900px;
+    margin-bottom: 30px;
+  }
 }
 
-.main-line {
-    position: absolute;
-    margin-left: 7px;
-    margin-top: 6px;
-    border-left: 2px solid $greenColor;
-    height: 600px;
+.job-search_container {
+  @include border-line_main;
+  border-color: $greenColor;
 }
 
 .job-search_block {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
-    flex-wrap: wrap;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  flex-wrap: wrap;
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }

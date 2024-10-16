@@ -1,5 +1,5 @@
-@import './allModule.scss';
-@import './colors&fonts.scss';
+@import "./allModule.scss";
+@import "./colors&fonts.scss";
 
 * {
   margin: 0;
@@ -16,6 +16,9 @@ body {
 
 a {
   text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
 .numbers {
